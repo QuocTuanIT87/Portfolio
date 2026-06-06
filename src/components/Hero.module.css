@@ -1,0 +1,140 @@
+/* ======== HERO (BillChien style) ======== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ======== LEFT PANEL ======== */
+.left {
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 3rem 2.5rem 3rem;
+  min-height: 100vh;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Logo / initials box */
+.initials {
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--mid);
+  max-width: 180px;
+  text-align: right;
+}
+
+/* ======== NAME LINES ======== */
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: auto 0;
+}
+
+.nameLine {
+  font-size: clamp(5rem, 10.5vw, 11rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  display: block;
+  font-family: var(--font-main);
+}
+
+/* "87" glass / outline text — transparent fill, stroked outline */
+.badge87 {
+  display: block;
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.88;
+
+  /* Glass text: transparent inside, stroked outline */
+  color: transparent;
+  -webkit-text-stroke: 2.5px var(--black);
+
+  /* No box, no background */
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+/* Bottom meta row */
+.bottomMeta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--black);
+}
+
+/* ======== RIGHT PANEL (full-bleed photo) ======== */
+.right {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.photo {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .left {
+    min-height: auto;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .nameLine {
+    font-size: clamp(4rem, 18vw, 7rem);
+  }
+
+  .right {
+    height: 60vw;
+    min-height: 280px;
+  }
+}

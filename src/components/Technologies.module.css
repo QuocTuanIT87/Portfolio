@@ -1,0 +1,118 @@
+.section {
+  padding: 5rem 0 0;
+}
+
+/* ======== TITLE AREA ======== */
+.titleArea {
+  padding: 0 3rem;
+  margin-bottom: 2rem;
+}
+
+/* ======== SCROLLABLE TRACK ======== */
+.track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 3rem 1.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ======== CARD ======== */
+.card {
+  flex: 0 0 220px;
+  height: 280px;
+  border-radius: 16px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.iconArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
+}
+
+.cardBottom {
+  padding: 1rem 1.2rem;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.techName {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ======== NAV BAR — dark strip with golden buttons ======== */
+.navBar {
+  /* background: var(--black); */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.6rem 3rem;
+}
+
+.navBtn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  /* background: var(--primary); */
+  background: #ffc451;
+  color: var(--black);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navBtn:hover {
+  transform: scale(1.05);
+  /* background: var(--primary-light); */
+}
+
+@media (max-width: 768px) {
+  .titleArea {
+    padding: 0 1.5rem;
+  }
+
+  .track {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .navBar {
+    padding: 1.4rem 1.5rem;
+  }
+}

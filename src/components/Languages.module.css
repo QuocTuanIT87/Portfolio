@@ -1,0 +1,83 @@
+.section {
+  padding: 5rem 0;
+}
+
+.card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 2rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+}
+
+.flagWrapper {
+  font-size: 3rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.flag {
+  display: block;
+}
+
+.info {
+  flex: 1;
+}
+
+.langName {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+
+.langDesc {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 1.2rem;
+}
+
+.skillBars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skillRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.skillLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--mid);
+  min-width: 70px;
+}
+
+.barTrack {
+  flex: 1;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--black);
+  border-radius: 99px;
+  transition: width 1s ease;
+}
+
+.skillPct {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  min-width: 32px;
+  text-align: right;
+}

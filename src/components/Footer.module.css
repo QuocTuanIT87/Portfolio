@@ -1,0 +1,127 @@
+.footer {
+  background: var(--black);
+  color: var(--primary);
+  padding: 5rem 0 2rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(255, 209, 119, 0.6);
+  max-width: 420px;
+}
+
+/* ======== CONTACT CARDS ======== */
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(255, 209, 119, 0.2);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--primary);
+  background: rgba(255, 209, 119, 0.04);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 209, 119, 0.06);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.contactCard:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.contactCard:hover::before {
+  opacity: 1;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 209, 119, 0.12);
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.contactLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 209, 119, 0.5);
+}
+
+.contactValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  font-size: 1rem;
+  color: rgba(255, 209, 119, 0.4);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.contactCard:hover .arrow {
+  transform: translateX(3px);
+  color: var(--primary);
+}
+
+/* ======== BOTTOM ======== */
+.bottom {
+  border-top: 1px solid rgba(255, 209, 119, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 209, 119, 0.3);
+}

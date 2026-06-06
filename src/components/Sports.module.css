@@ -1,0 +1,109 @@
+.section {
+  padding: 5rem 0 4rem;
+}
+
+/* ======== TITLE ======== */
+.titleArea {
+  padding: 0 3rem;
+  margin-bottom: 2rem;
+}
+
+/* ======== CENTERED 4-COLUMN GRID ======== */
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+
+/* ======== CARD WRAPPER ======== */
+.cardWrapper {
+  flex: 0 0 calc(25% - 0.75rem);
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* ======== PORTRAIT CARD ======== */
+.card {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover .img {
+  transform: scale(1.06);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  background: rgba(255, 209, 119, 0.92);
+  color: var(--black);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* ======== META ======== */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.sportName {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: 0.04em;
+}
+
+.category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.45);
+  letter-spacing: 0.06em;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 900px) {
+  .grid {
+    flex-wrap: wrap;
+  }
+  .cardWrapper {
+    flex: 0 0 calc(50% - 0.5rem);
+    max-width: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .titleArea { padding: 0 1.5rem; }
+  .grid { padding: 0 1.5rem; }
+  .cardWrapper {
+    flex: 0 0 100%;
+  }
+}

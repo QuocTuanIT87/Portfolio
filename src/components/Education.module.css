@@ -1,0 +1,66 @@
+.section {
+  padding: 5rem 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2.5rem;
+  padding: 2rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 0px var(--black);
+  transform: translate(-2px, -2px);
+}
+
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.3rem;
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.school {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.3;
+}
+
+.degree {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--mid);
+}
+
+.location {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

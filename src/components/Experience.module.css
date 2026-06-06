@@ -1,0 +1,166 @@
+.section {
+  padding: 5rem 0;
+}
+
+.jobCard {
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.jobHeader {
+  padding: 1.8rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.company {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.04em;
+}
+
+.position {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--mid);
+  margin-top: 0.4rem;
+}
+
+/* ======== PROJECT BLOCKS ======== */
+.projectBlock {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.projectToggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: background 0.2s;
+}
+
+.projectToggle:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.projectLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.arrow {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.projectDetails {
+  padding: 0 2rem 1.8rem 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.projectDesc {
+  font-size: 0.95rem;
+  color: var(--mid);
+  margin-bottom: 1.2rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featureIcon {
+  font-size: 1.4rem;
+}
+
+.featureCard strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.featureCard ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.featureCard ul li {
+  font-size: 0.82rem;
+  color: var(--mid);
+  padding-left: 0.8rem;
+  position: relative;
+}
+
+.featureCard ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featureList li {
+  font-size: 0.95rem;
+  color: var(--mid);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.featureList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.8rem;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: var(--mid);
+  margin-top: 0.8rem;
+  padding: 0.6rem 1rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-left: 3px solid var(--black);
+  border-radius: 0 2px 2px 0;
+}
