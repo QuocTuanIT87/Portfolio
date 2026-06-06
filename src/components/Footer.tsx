@@ -1,29 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
 
-// Custom SVG icons
-const ZaloIcon = () => (
-  <svg
-    viewBox="0 0 48 48"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect width="48" height="48" rx="10" fill="currentColor" opacity="0" />
-    <text
-      x="50%"
-      y="58%"
-      dominantBaseline="middle"
-      textAnchor="middle"
-      fontSize="22"
-      fontWeight="900"
-      fontFamily="Arial, sans-serif"
-      fill="currentColor"
-    >
-      Za
-    </text>
-  </svg>
-);
-
 const contacts = [
   {
     id: "contact-zalo",
@@ -46,9 +23,9 @@ const contacts = [
           fontSize="18"
           fontWeight="900"
           fontFamily="Arial Black, sans-serif"
-          fill="currentColor"
+          fill="#ffc451"
         >
-          ZA
+          ZL
         </text>
       </svg>
     ),
